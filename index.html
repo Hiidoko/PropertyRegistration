@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Property Registration</h1>
+    <div class="container">
+        <form id="propertyForm">
+            <div>
+                <label for="owner">Owner:</label>
+                <input type="text" id="owner" class="owner-input" required>
+            </div>
+            <div>
+                <label>Rooms:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="rooms" value="1" required> 1</label>
+                    <label><input type="radio" name="rooms" value="2"> 2</label>
+                    <label><input type="radio" name="rooms" value="3"> 3</label>
+                    <label><input type="radio" name="rooms" value="4+"> 4+</label>
+                </div>
+            </div>
+            <div>
+                <label>Bathrooms:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="bathrooms" value="1" required> 1</label>
+                    <label><input type="radio" name="bathrooms" value="2"> 2</label>
+                    <label><input type="radio" name="bathrooms" value="3"> 3</label>
+                    <label><input type="radio" name="bathrooms" value="4+"> 4+</label>
+                </div>
+            </div>
+            <div>
+                <label>Has garage?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="garage" value="Yes" required> Yes</label>
+                    <label><input type="radio" name="garage" value="No"> No</label>
+                </div>
+            </div>
+            <button type="submit">Register Property</button>
+        </form>
+
+        <div id="propertiesList" class="properties-list">
+            <h2>Registered Properties</h2>
+            <ul id="propertyList"></ul>
+        </div>
+
+        <button id="deleteAllButton">Delete All Properties</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
